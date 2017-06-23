@@ -36,6 +36,8 @@ typedef volatile long long atomic64_t;
 # define ATOMIC64_ADD(tar,val)		__sync_add_and_fetch (&tar, val)
 # define ATOMIC64_SUB(tar,val)		__sync_sub_and_fetch(&tar,val)
 
+#else
+# error current platform isn't supported
 #endif
 
 #endif //_ATOMIC_H_
